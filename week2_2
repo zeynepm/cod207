@@ -1,0 +1,11 @@
+size(300,200);
+
+stroke(0,0,255);
+strokeWeight(20);
+line(15,15,100,15);
+
+//Draw a triangle
+stroke(0,255,0);
+strokeWeight(1);
+triangle(30,75,58,20,86,75);
+
