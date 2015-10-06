@@ -1,0 +1,53 @@
+void setup(){
+size(600,600);
+frameRate(60);
+}
+
+
+
+void draw() {
+  background(0);
+  stroke(255);
+  strokeWeight(8);
+  
+  for(int y = 0; y < 660; y = y + 60)
+  for(int i = 0; i < 660; i = i + 60) {
+    fill(0,160,196);
+    strokeWeight(0);
+    /*ellipse(i,y,53,53);
+     ellipse(i,60,53,53);
+     ellipse(i,120,53,53);
+     ellipse(i,180,53,53);
+     ellipse(i,240,53,53);
+     ellipse(i,300,53,53);
+     ellipse(i,360,53,53);
+     ellipse(i,420,53,53);
+     ellipse(i,480,53,53);
+     ellipse(i,540,53,53);
+     ellipse(i,600,53,53);
+     
+     fill(0,200,196);
+       ellipse(i,0,13,13);
+     ellipse(i,60,23,23);
+     ellipse(i,120,33,33);
+     ellipse(i,180,43,43);
+     ellipse(i,240,33,33);
+     ellipse(i,300,23,23);
+     ellipse(i,360,13,13);
+     ellipse(i,420,23,23);
+     ellipse(i,480,33,33);
+     ellipse(i,540,43,43);
+     ellipse(i,600,33,33);*/
+     
+     ellipse(i,y,60,60);
+    fill(0,200,196);
+    ellipse(i,y,13,13);
+    
+    
+    
+     
+  }
+  
+ 
+
+}
