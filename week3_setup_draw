@@ -1,0 +1,57 @@
+void setup() {
+  //set the window size
+  size(500,400);
+  
+  //set the framerate
+  frameRate(60);
+  
+  //print some text to console
+  println("I'm starting");
+}
+
+
+void draw() {
+  //set background refreh color
+  background(0);
+  
+  //set stroke color
+  stroke(255);
+  
+  //set stroke thickness
+  strokeWeight(8);
+  
+  //draw parallel lines
+  //x1,y1,x2,y2
+ /* line(20,40,80,80);
+  line(80,40,140,80);
+  line(140,40,200,80);
+  line(200,40,260,80);
+  line(260,40,320,80);
+  line(320,40,380,80);
+  line(380,40,440,80);*/
+  
+  for(int i = 20; i < 440; i = i + 60) {
+    strokeWeight(2);
+    noFill();
+    line(i,40,i + 60,80);
+    strokeWeight(3);
+    noFill();
+    ellipse(i,40,30,30);
+   ellipse(i +60,80,30,30);
+   strokeWeight(9);
+   rect(i+25,55,10,10);
+   
+   strokeWeight(2);
+   line(i+60,40,i +60,80);
+    
+   
+   
+   
+   
+   
+   
+   
+ 
+   
+  }
+}
