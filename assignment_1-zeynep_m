@@ -1,0 +1,108 @@
+
+size(577,600);
+
+background(255,255,255);
+
+//blue third horizontal
+fill(40,10,150);
+noStroke();
+rect(0,550,600,15);
+
+
+// blue first left vertical
+fill(40,10,150);
+noStroke();
+rect(40,0,15,600);
+
+//yellow sixth horizontal
+fill(255,255,0);
+rect(0,580,600,15);
+
+//blue second horizontal
+fill(40,10,150);
+rect(0,195,600,15);
+
+//yellow second horizontal
+fill(255,255,0);
+rect(0,100,600,15);
+
+//blue first horizontal
+fill(40,10,150);
+rect(0,60,600,15);
+
+
+
+
+// red horizontal first
+fill(255,0,0);
+noStroke();
+rect(0,15,600,15);
+
+// yellow second left rect vertical
+fill(255,255,0);
+rect(65,0,15,600);
+
+//red second horizontal
+fill(255,0,0);
+rect(0,355,600,15);
+
+// yellow first left rect vertical
+fill(255,255,0);
+noStroke();
+rect(15,0,15,600);
+
+
+
+//yellow third vertical
+fill(255,255,0);
+rect(245,0,15,600);
+
+//red second vertical
+fill(255,0,0);
+rect(520,0,15,600);
+
+
+//yellow first horizontal
+fill(255,255,0);
+rect(0,40,600,15);
+
+//yellow fourth horizontal
+fill(255,255,0);
+rect(0,330,600,15);
+
+//red first vertical
+fill(255,0,0);
+rect(188,0,15,600);
+
+//yellor fourth vertical
+fill(255,255,0);
+rect(345,0,15,600);
+
+//yellow fifth vertical
+fill(255,255,0);
+rect(378,0,15,600);
+
+//yellow sixth vertical
+fill(255,255,0);
+rect(440,0,15,600);
+
+//yellow seventh vertical
+fill(255,255,0);
+rect(470,0,15,600);
+
+
+//yellow eighth vertical
+fill(255,255,0);
+rect(550,0,15,600);
+
+//yellow third horizontal
+fill(255,255,0);
+rect(0,220,600,15);
+
+//yellow fourth horiztontal
+fill(255,255,0);
+rect(0,455,600,15);
+
+//yellow fifth horiztontal
+fill(255,255,0);
+rect(0,488,600,15);
