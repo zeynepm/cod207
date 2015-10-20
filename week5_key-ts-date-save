@@ -1,0 +1,63 @@
+//make it mouse click interactive
+
+int counter = 0;
+String ts;
+
+int h;
+int m;
+int s;
+int ms;
+
+int y;
+int month;
+int d;
+
+void setup(){
+  size(480, 480);
+  strokeWeight(8);
+  smooth();
+  stroke(0,102);
+  strokeCap(MITER); //ROUND default one- PROJECT-MİTER
+  background(255);
+}
+
+void draw() {
+  if(mousePressed == true) {
+    line(mouseX,mouseY,pmouseX,pmouseY);
+  
+  saveFrame("this-is-my-drawing"+ (ts)+".png");
+  }
+
+
+  h= hour();
+  m = minute();
+  s = second();
+  
+  y = year();
+  month = month();
+  d = day();
+  
+  println(d + "/" + month + "/" + y + "-" + h + ":" + m +  ":" + s + ":" + ms);
+  
+  ts =str(d) + "." + str(month) + "." + str(y) + "-" + str(h) + ":" + str(m) +  ":" + str(s) + ":" + str(ms);
+
+  //counter =counter + 1;
+  //counter++; 
+ 
+  println("counter value : " + counter);
+  
+}
+
+void keyPressed(){
+  //println("key ; " + key);
+  //println("keyCode : " + keyCode);
+
+  if(key == 'c') {
+    background(255);
+  }
+  
+ if(key =='s'){
+
+ }
+  
+}
