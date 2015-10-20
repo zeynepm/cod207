@@ -1,0 +1,46 @@
+Boolean isPressed = false;
+void setup(){
+  size(480,480);
+  fill(0,102);
+  background(255);
+  smooth();
+  noStroke();
+}
+
+void draw(){
+  //1-background(204);
+  //println("mouse x pos: " + mouseX + " | " + "mouse y pos: " mouseY);
+  //background(#ffffff);
+  fill(#000000);
+  ellipse(mouseX,mouseY,20,20);
+  
+  //println("is mouse presse?" + mousePressed);
+  
+  
+  //if I predd mouseleft button draw blck rect onto canvas
+  //if not (else) draw a red rect
+ /*if(mousePressed) {
+  rect(width*0.5 -20,height*0.5 -20,40,40);
+  }else{
+    fill(#ff0000);
+    rect(width*0.5 -20,height*0.5 -20,40,40);
+  }
+  */
+  
+  
+  if(isPressed == true){
+    //rect(width*0.5 -20,height*0.5 -20,40,40);
+background(255);
+  }
+ 
+  
+ 
+}
+
+void mousePressed() {
+  isPressed = true;
+}
+
+void mouseReleased(){
+  isPressed = false;
+}
