@@ -1,0 +1,35 @@
+/*String foo = "Hello World";
+
+
+void setup() {
+  size(800,600);
+  background(#2d86ef);
+  textSize(64);
+  textLeading(12);
+  //textAlign(RIGHT);
+  //smooth();
+}
+
+
+void draw() {
+  background(#2d86ef);
+  text(foo,width*0.5 - textWidth(foo),height*0.5);
+}
+*/
+
+//custom font
+PFont f;
+
+void setup(){
+  size(400,400);
+  background(0);
+  f = createFont("AdobeHebrew-Bold.otf",24);
+  textFont(f);
+  
+}
+
+
+void draw() {
+  background(0);
+  text("this is my serif font", 100,100);
+}
