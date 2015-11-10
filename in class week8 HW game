@@ -1,0 +1,168 @@
+int xpos = 110;
+int ypos = 110;
+int directionX = 1;
+int directionY = 1;
+
+int moveFacX = 5;
+int moveFacY = 2;
+
+int radius = 40;
+
+/*int startTime;
+int finishTime = 30;*/
+
+int m;
+int starttime ;
+int finishtime= 5;
+int seconds;
+
+
+
+//enemy
+PShape enemy;
+int w1 = 200;
+int h1 = 200;
+int x1;
+int y1; 
+
+// hero
+PShape hero;
+int w = 110;
+int h = 50; 
+int x;
+int y;
+
+// Game scenes
+boolean scene1 = true; // game start scene
+boolean scene2 = false; // game playing scene
+boolean scene3 = false; // game success
+boolean scene4 = false; // game fail
+
+// Scene 1  - start button
+boolean isMouseOverStartBtn = false;
+void setup() {
+  size(400, 400);
+hero = loadShape("bat.svg");
+ enemy = loadShape("enemy.svg");
+
+ 
+}
+
+
+void draw() {
+  background(255);
+
+  // Scene 1
+  if (scene1 == true) {
+
+    if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 30) {
+      fill(0, 200, 0);
+      isMouseOverStartBtn = true;
+    } else {
+      fill(140);
+      isMouseOverStartBtn = false;
+    }
+    noStroke();
+
+    rect(0, 0, 100, 30);
+    fill(255);
+    text("START GAME", 100*0.5 - textWidth("START GAME")*0.5, 18);
+    
+     starttime = second();
+  }
+
+
+  // Scene 2
+
+
+  
+  if (scene2 == true) {
+    // Game Timer
+    
+  /*text("time remains : " + str(abs(millis() - startTime)), 20, 20);
+     println("timing : " + abs(millis() - startTime));
+     if (abs(millis() - startTime) == finishTime) {
+     println("game finished");
+     startTime = millis();
+     }
+     */
+     
+    
+
+    if (abs(second() - starttime) == finishtime){
+      println("game finish");
+  }
+    
+     fill(0);
+     textSize(50);
+     text(abs(second() - starttime),50,60);
+      
+      
+    if (xpos > width - radius * 0.5) {
+      directionX = -1;
+      //moveFacX = int(random(1, 10));
+    } 
+
+    if (xpos < radius * 0.5) {
+      directionX = 1;
+      //moveFacX = int(random(1, 10));
+    }
+
+    if (ypos > height - radius * 0.5) {
+      directionY = -1;
+      //moveFacY = int(random(1, 10));
+    } 
+
+    if (ypos < radius * 0.5) {
+      directionY = 1;
+      //moveFacY = int(random(1, 10));
+    }
+
+
+
+    xpos += moveFacX * directionX;
+    ypos += moveFacY * directionY;
+
+
+    fill(0, 200, 0);
+    //ellipse(xpos, ypos, radius, radius);
+    shape(enemy,xpos,ypos,radius,radius);
+
+
+
+    fill(0, 0, 180);
+    //rect(mouseX-w*0.5, mouseY-h*0.5, w, h);
+    //rect(mouseX, mouseY, w, h);
+    shape(hero,mouseX,mouseY,110,50);
+    
+    if(mouseX+w > xpos - radius * 0.5 && 
+    mouseX < xpos + radius * 0.5 &&
+    mouseY+h > ypos - radius * 0.5 &&
+    mouseY < ypos + radius * 0.5) {
+      println("touch");
+      scene2 =false;
+  }
+    
+  }
+  
+
+  
+  // Scene 3
+  if(scene3 == true) {
+    
+ 
+    
+    
+    
+  }
+}
+
+void mousePressed() {
+  if (isMouseOverStartBtn) {
+    // disable scene1
+    scene1 = false;
+
+    // enable scene2 
+    scene2 = true;
+  }
+}
